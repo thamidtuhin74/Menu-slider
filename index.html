@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Open Library</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/font-awsm/all.min.css">
+  <link rel="stylesheet" href="css/etlinefont.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/font-awsm/all.min.js"></script>
+</head>
+<body>
+
+<div class="navigation">	
+	<div class="m-4 ">
+    	<nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+            	<img src="img/openlibrary-logo-tighter.png" alt="logo">
+            </a>
+
+            <div class="navbar-nav lavel-search0">
+                	<label class="search-facet-selector">
+		            <span aria-hidden="true" class="search-facet-value"></span>
+			            <select aria-label="Search by"  class="all">>
+			              <option value='all'>All</option>
+			              <option value='title'>Title</option>
+			              <option value='author'>Author</option>
+			              <option value='text'>Text</option>
+			              <option value='subject'>Subject</option>
+			              <option value='lists'>Lists</option>
+			              <option value='advanced'>Advanced</option>
+			              </select>
+		         	 </label>
+		          	<form class="search-bar-input" action="/search" method="get">
+		          	<input type="text" name="q" placeholder="Search" aria-label="Search" autocomplete="off">
+
+		          	<button type="submit" value="" class="search-bar-submit" aria-label="Search submit"><i class="bi-search"></i></button>
+		          	</form>
+            </div>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav browser-more">
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Browse</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Subject</a>
+                            <a href="#" class="dropdown-item">Trending</a>
+                            <a href="#" class="dropdown-item">Library Explorer</a>
+                            <a href="#" class="dropdown-item">Lists</a>
+                            <a href="#" class="dropdown-item">Collections</a>
+                            <a href="#" class="dropdown-item">K-12 Student Library</a>
+                            <a href="#" class="dropdown-item">Random Book</a>
+                            <a href="#" class="dropdown-item">Advanced Search</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown more">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Add a Book</a>
+                            <a href="#" class="dropdown-item">Recent Community Edits</a>
+                            <a href="#" class="dropdown-item">Developer Center</a>
+                            <a href="#" class="dropdown-item">Help & Support</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-nav lavel-search">
+                	<label class="search-facet-selector">
+		            <span aria-hidden="true" class="search-facet-value"></span>
+			            <select aria-label="Search by"  class="all">>
+			              <option value='all'>All</option>
+			              <option value='title'>Title</option>
+			              <option value='author'>Author</option>
+			              <option value='text'>Text</option>
+			              <option value='subject'>Subject</option>
+			              <option value='lists'>Lists</option>
+			              <option value='advanced'>Advanced</option>
+			              </select>
+		         	 </label>
+		          	<form class="search-bar-input" action="/search" method="get">
+		          	<input type="text" name="q" placeholder="Search" aria-label="Search" autocomplete="off">
+
+		          	<button type="submit" value="" class="search-bar-submit" aria-label="Search submit"><i class="bi-search"></i></button>
+		          	</form>
+                </div>
+            	<div class="navbar-nav auth">
+                	<a href="#" class="nav-item nav-link login">Log In</a>
+                	<a href="#" class="nav-item nav-link sign-up">Sign Up</a>
+            	</div>
+                
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="tab-mobile-drpdown">
+			<div class="nav-item dropdown1">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Browse</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Subject</a>
+                            <a href="#" class="dropdown-item">Trending</a>
+                            <a href="#" class="dropdown-item">Library Explorer</a>
+                            <a href="#" class="dropdown-item">Lists</a>
+                            <a href="#" class="dropdown-item">Collections</a>
+                            <a href="#" class="dropdown-item">K-12 Student Library</a>
+                            <a href="#" class="dropdown-item">Random Book</a>
+                            <a href="#" class="dropdown-item">Advanced Search</a>
+                        </div>
+                    </div>
+		
+		
+			<div class="nav-item dropdown1 more">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Add a Book</a>
+                            <a href="#" class="dropdown-item">Recent Community Edits</a>
+                            <a href="#" class="dropdown-item">Developer Center</a>
+                            <a href="#" class="dropdown-item">Help & Support</a>
+                        </div>
+                    </div>
+
+        </div>
+
+	
+</div>
+</div>
+
+<div class="main-container">
+    <div class="wrapper">
+    
+      <div class="slider-title">
+          <h2>Welcome to Open Library</h2>
+      </div>
+
+      <div class="container">
+        <div class="row slider">
+          <div class="col-md-12">
+            <div class="details">
+            	<a href="#">
+	              <div class="left">
+	                <img src="img/read.png" alt="#">
+	              </div>
+	              <div class="right">
+	                <h3>Read free library books online</h3><p>Millions of book books available through controlled digital lending</p>
+	              </div>
+              </a>
+            </div>
+          </div> 
+
+          <div class="col-md-12">
+            <div class="details">
+            	<a href="#">
+	              <div class="left">
+	                <img src="img/track.png" alt="#">
+	              </div>
+	              <div class="right">
+	                <h3>Read free library books online</h3><p>Millions of book books available through controlled digital lending</p>
+	              </div>
+              </a>
+            </div>
+          </div> 
+
+          <div class="col-md-12">
+            <div class="details">
+            	<a href="#">
+	              <div class="left">
+	                <img src="img/fulltext.png" alt="#">
+	              </div>
+	              <div class="right">
+	                <h3>Read free library books online</h3><p>Millions of book books available through controlled digital lending</p>
+	              </div>
+              </a>
+            </div>
+          </div> 
+
+          <div class="col-md-12">
+            <div class="details">
+            	<a href="#">
+	              <div class="left">
+	                <img src="img/library_explorer.png" alt="#">
+	              </div>
+	              <div class="right">
+	                <h3>Read free library books online</h3><p>Millions of book books available through controlled digital lending</p>
+	              </div>
+              </a>
+            </div>
+          </div> 
+
+          <div class="col-md-12">
+            <div class="details">
+            	<a href="#">
+	              <div class="left">
+	                <img src="img/librarian.png" alt="#">
+	              </div>
+	              <div class="right">
+	                <h3>Read free library books online</h3><p>Millions of book books available through controlled digital lending</p>
+	              </div>
+              </a>
+            </div>
+          </div> 
+
+          <div class="col-md-12">
+            <div class="details">
+            	<a href="#">
+	              <div class="left">
+	                <img src="img/feedback_r.png" alt="#">
+	              </div>
+	              <div class="right">
+	                <h3>Read free library books online</h3><p>Millions of book books available through controlled digital lending</p>
+	              </div>
+              </a>
+            </div>
+          </div> 
+
+          
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script type="text/javascript">
+  $('.slider').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        arrows: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: false
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        arrows: true,
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 650,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+</script>
+
+	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script type="text/javascript">
+	$('.d').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+</script>
+  
+</body>
+</html>
+
